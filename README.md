@@ -1,2 +1,2 @@
-# quanglinh-invivation
+# quanglinh-invitation
 wedding
