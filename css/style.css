@@ -1,0 +1,282 @@
+body {
+  opacity: 0;
+  transition: opacity 5s ease;
+}
+
+
+body.loaded {
+  opacity: 1;
+}
+
+/* Ẩn các dòng chữ ban đầu */
+.line {
+  opacity: 0;
+  transform: translateY(20px); /* Tạo hiệu ứng trượt lên */
+  transition: opacity 1s ease, transform 1s ease; /* Hiệu ứng trượt và mờ */
+}
+
+/* Khi dòng chữ được hiển thị */
+.line.show {
+  opacity: 1;
+  transform: translateY(0); /* Chữ trở lại vị trí ban đầu */
+}
+
+.flower {
+  position: absolute;
+  top: -50px; /* Cánh hoa bắt đầu từ bên trên màn hình */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+@keyframes fall {
+  0% {
+      transform: translateY(0) rotate(0deg);
+  }
+  100% {
+      transform: translateY(100vh) rotate(360deg); /* Hoa rơi và xoay khi rơi */
+  }
+}
+
+.alegreya-1 {
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fleur-de-leah-regular {
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.updock-bold {
+  font-family: "Updock", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body{
+  background-color: #f7f7f7;
+  font-size: 18px;
+  font-size: 18px;
+  background: fixed;
+  background: no-repeat;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section{
+  /* min-height: 100vh; */
+  position: relative;
+}
+/* 
+.section::before{
+  background-image: url(../images/flower.png);
+  content: '';
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-size: contain;
+  max-height: 500px;
+  max-width: 500px;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  z-index: -1;
+  right: -190px;
+  top:-25px;
+}
+
+.section::after{
+  background-image: url(../images/flower-1.png);
+  content: '';
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-size: contain;
+  max-height: 500px;
+  max-width: 500px;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  z-index: -1;
+  left: -190px;
+  bottom:-155px;
+} */
+/* 
+.section-1::before{
+  background-image: url(../images/backdrop1.jpg);
+  content: '';
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-size: contain;
+  max-height: 500px;
+  max-width: 500px;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  z-index: -1;
+  left: -190px;
+  top:-25px;
+}
+
+.section-1::after{
+  background-image: url(../images/backdrop2.jpg);
+  content: '';
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-size: contain;
+  max-height: 500px;
+  max-width: 500px;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  z-index: -1;
+  left: -190px;
+  bottom:-155px;
+} */
+
+.name-section{
+  background-image: url(../images/flower-frame.png);
+  background-size: contain;
+  max-height: 500px;
+  max-width: 500px;
+  display: block;
+  height: 100vw;
+  width: 100vw;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.line-bar{
+border-top: 3px double #bd7300;
+border-bottom: 3px double #bd7300;
+}
+
+.line-bar + .line-bar{
+  border-top: none;
+  }
+
+
+
+
+
+
+
+/** ANIMATION **/
+.rotate {
+  animation: spin 120s linear infinite; /* 2 giây quay 1 vòng */
+}
+
+@keyframes spin {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.wedding-gifts {
+  list-style: none;
+  margin-bottom: 35px;
+  margin-top: 15px;
+  padding: 0;
+}
+
+.wedding-gifts li {
+  position: relative;
+  display: block;
+  color: #8eaeba;
+  background-color: #fff;
+  padding: 35px;
+  margin-bottom: 35px;
+}
+
+.wedding-gifts li .neela-style {
+  --offset: 7px;
+  --border-size: 1px;
+  color: #343a40;
+  position: relative;
+  padding: 32px;
+  z-index: 0;
+}
+
+.wedding-gifts li .neela-style .h-lines {
+  border-top-color: rgba(116, 123, 169, 0.5);
+  border-bottom-color: rgba(116, 123, 169, 0.5);
+}
+
+.wedding-gifts li .neela-style .h-lines {
+  border-top-color: rgba(142, 174, 186, .5);
+  border-bottom-color: rgba(142, 174, 186, .5);
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.h-lines {
+  --vertical-offset: calc(var(--offset)* -1);
+  border-top: var(--border-size) solid currentcolor;
+  border-bottom: var(--border-size) solid currentcolor;
+  top: calc(var(--border-size)* -1);
+  bottom: calc(var(--border-size)* -1);
+}
+
+.v-lines {
+  --horizontal-offset: calc(var(--offset)* -1);
+  border-left: var(--border-size) solid currentcolor;
+  border-right: var(--border-size) solid currentcolor;
+  right: calc(var(--border-size)* -1);
+  left: calc(var(--border-size)* -1);
+}
+
+.h-lines, .v-lines {
+  position: absolute;
+  top: var(--horizontal-offset, 0);
+  right: var(--vertical-offset, 0);
+  bottom: var(--horizontal-offset, 0);
+  left: var(--vertical-offset, 0);
+  transition: transform .8s ease;
+  will-change: transform;
+  z-index: -1;
+}
+
+.h-lines::before {
+  top: calc(var(--vertical-offset) - var(--border-size));
+  bottom: calc(var(--vertical-offset) - var(--border-size));
+  left: calc(var(--offset) - var(--border-size));
+  right: calc(var(--offset) - var(--border-size));
+}
+
+.v-lines::before {
+  top: calc(var(--offset) - var(--border-size));
+  bottom: calc(var(--offset) - var(--border-size));
+  left: calc(var(--horizontal-offset) - var(--border-size));
+  right: calc(var(--horizontal-offset) - var(--border-size));
+}
+
+.h-lines::before, .v-lines::before {
+  content: "";
+  position: absolute;
+  border: inherit;
+}
+
+@media (max-width: 480px) {
+  .wedding-gifts {
+    margin-bottom: 0;
+  }
+  
+  .wedding-gifts li {
+    margin-bottom: 15px;
+  }
+
+  .wedding-gifts li .neela-style {
+      padding: 15px;
+  }
+}
